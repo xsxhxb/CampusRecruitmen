@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>粤豪珠宝 · 2027届校园招聘 ｜ 少年，自成璀璨</title>
+<meta name="description" content="深圳市粤豪珠宝有限公司2027届校园招聘：营销类管培生、职能类管培生热招中。百年银楼传承，全产业链平台，专属校招培养体系。">
+<style>
+  :root{
+    --ink:#173d6b;
+    --text:#3d5573;
+    --muted:#7d93ad;
+    --blue:#2f7de0;
+    --sky:#4aa3f0;
+    --sky-2:#7cc3f8;
+    --deep:#1d5fa8;
+    --orange:#ff9d3c;
+    --green:#2eb872;
+    --pink:#ec6ea5;
+    --gold:#e6b54c;
+    --gold-deep:#c98f2d;
+    --bg:#f2f9ff;
+    --paper:#ffffff;
+    --line:#dbeefd;
+    --shadow:0 12px 34px rgba(47,125,224,.10);
+    --radius:22px;
+    --grad:linear-gradient(135deg,#2f7de0,#4aa3f0);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--text);background:var(--bg);
+    -webkit-font-smoothing:antialiased;line-height:1.75;
+  }
+  body.locked{overflow:hidden;height:100vh}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .dots{background-image:radial-gradient(#dcebfd 1.2px,transparent 1.2px);background-size:24px 24px}
+  .brush{font-family:"Xingkai SC","STXingkai","KaiTi","STKaiti","SimKai",serif}
+
+  /* ============ 云朵 ============ */
+  .cloud{position:absolute;background:#fff;border-radius:100px;opacity:.95;pointer-events:none}
+  .cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+  .cloud.c1{width:150px;height:42px;animation:drift 9s ease-in-out infinite alternate}
+  .cloud.c1::before{width:58px;height:58px;top:-26px;left:24px}
+  .cloud.c1::after{width:42px;height:42px;top:-15px;left:72px}
+  .cloud.c2{width:110px;height:32px;animation:drift 12s ease-in-out infinite alternate-reverse}
+  .cloud.c2::before{width:44px;height:44px;top:-20px;left:18px}
+  .cloud.c2::after{width:32px;height:32px;top:-11px;left:52px}
+  .cloud.c3{width:190px;height:50px;opacity:.8;animation:drift 14s ease-in-out infinite alternate}
+  .cloud.c3::before{width:72px;height:72px;top:-32px;left:30px}
+  .cloud.c3::after{width:52px;height:52px;top:-19px;left:92px}
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(36px)}}
+
+  /* ============ 开场封面 ============ */
+  #cover{
+    position:fixed;inset:0;z-index:300;overflow:hidden;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    background:linear-gradient(180deg,#7cc3f8 0%,#a8d8fb 42%,#dff1fe 100%);
+    transition:transform 1s cubic-bezier(.7,0,.3,1),opacity 1s ease;
+  }
+  #cover.opened{transform:translateY(-102%);opacity:.35;pointer-events:none}
+  .cover-fade{position:absolute;left:0;right:0;bottom:0;height:20%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.6));pointer-events:none}
+  .cover-corner{
+    position:absolute;top:22px;left:26px;z-index:5;
+    color:var(--deep);font-weight:800;font-size:13px;letter-spacing:3px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .cover-corner .dot{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,#ffd76e,#e6b54c);transform:rotate(-8deg)}
+  .cover-star{position:absolute;color:#f5a623;pointer-events:none;animation:twinkle 2.6s ease-in-out infinite}
+  .cover-star em{font-style:normal;display:block}
+  .cover-star.st1{top:14%;left:12%;font-size:26px}
+  .cover-star.st2{top:10%;right:14%;font-size:20px;color:#ffc14d;animation-delay:.8s}
+  .cover-star.st3{top:38%;right:9%;font-size:16px;animation-delay:1.5s}
+  .cover-star.st4{top:46%;left:8%;font-size:18px;color:#ffc14d;animation-delay:2s}
+  .cover-star.st5{bottom:26%;right:16%;font-size:22px;animation-delay:.4s}
+  .cover-star.st6{bottom:34%;left:14%;font-size:14px;animation-delay:1.2s}
+  @keyframes twinkle{0%,100%{transform:scale(1) rotate(0);opacity:.75}50%{transform:scale(1.28) rotate(12deg);opacity:1}}
+  .cover-inner{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:66px 20px 26px;width:100%}
+  .cover-title{
+    color:#fff;font-weight:800;letter-spacing:6px;line-height:1.22;
+    font-size:clamp(42px,8.5vw,72px);transform:rotate(-1.5deg);
+    text-shadow:0 4px 16px rgba(29,95,168,.42),0 2px 0 rgba(29,95,168,.16);
+  }
+  .cover-title em{
+    font-style:normal;
+    background:linear-gradient(180deg,#ffe9a8 10%,#ffd25e 55%,#f0a92c 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 6px rgba(180,120,20,.3));
+  }
+  .cover-title .spark{font-style:normal;font-size:.42em;vertical-align:super;color:#ffd76e;-webkit-text-fill-color:#ffd76e;filter:none;text-shadow:none;display:inline-block;animation:twinkle 2.2s ease-in-out infinite}
+  .cover-sub{
+    margin-top:14px;color:var(--deep);font-weight:800;letter-spacing:3.5px;
+    font-size:clamp(13.5px,2.4vw,17.5px);
+  }
+  /* ===== 封面动漫插画 ===== */
+  .cover-art{
+    position:relative;margin-top:22px;width:min(620px,94vw);height:min(390px,46vh);
+  }
+  .mate{
+    position:absolute;bottom:0;margin:0;background:#fff;padding:7px 7px 0;border-radius:20px;
+    box-shadow:0 18px 40px rgba(29,95,168,.3);
+    transform:translateX(var(--x)) rotate(var(--r));
+    animation:mateIn .9s cubic-bezier(.2,.9,.25,1.2) var(--d) both;
+  }
+  .mate img{display:block;height:calc(min(390px,46vh) - 48px);width:auto;aspect-ratio:3/4;object-fit:cover;border-radius:15px}
+  .mate figcaption{text-align:center;font-size:12.5px;font-weight:800;letter-spacing:1.5px;color:var(--deep);padding:6px 0 8px}
+  .mate .say{
+    position:absolute;top:-16px;white-space:nowrap;background:#fff;color:var(--deep);font-size:12.5px;font-weight:900;
+    padding:6px 12px;border-radius:14px;border:2px solid #2f7de0;box-shadow:0 6px 16px rgba(29,95,168,.22);
+    animation:pop 3s ease-in-out infinite;
+  }
+  .m-center{left:50%;z-index:3;--x:-50%;--r:0deg;--d:.2s}
+  .m-left{left:0;z-index:2;--x:0;--r:-8deg;--d:.45s}
+  .m-right{right:0;z-index:2;--x:0;--r:8deg;--d:.6s}
+  .m-left img,.m-right img{height:calc(min(390px,46vh) - 90px)}
+  .m-left,.m-right{bottom:6%}
+  .m-center .say{left:50%;transform:translateX(-50%);animation:none;top:-20px}
+  .m-left .say{left:-4px;animation-delay:.8s}
+  .m-right .say{right:-4px;animation-delay:1.5s}
+  @keyframes mateIn{
+    from{opacity:0;transform:translateX(var(--x)) translateY(70px) rotate(0) scale(.85)}
+    to{opacity:1;transform:translateX(var(--x)) rotate(var(--r))}
+  }
+  .art-tag{
+    position:absolute;z-index:4;font-size:12.5px;font-weight:800;letter-spacing:1.5px;color:#fff;
+    padding:6px 15px;border-radius:99px;box-shadow:0 8px 18px rgba(0,0,0,.18);
+  }
+  .art-tag.t1{top:2%;left:-1%;background:linear-gradient(135deg,#ff9d3c,#ffbd73);transform:rotate(-10deg)}
+  .art-tag.t2{bottom:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2eb872,#4ed39a)}
+  @keyframes pop{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.07) rotate(2deg)}}
+
+  .offer-box{width:min(120px,28vw);margin-top:6px;animation:bob 2.8s ease-in-out infinite;position:relative;z-index:3}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  #openBtn{
+    position:relative;border:none;background:none;cursor:pointer;margin-top:14px;
+    color:var(--deep);font-weight:900;font-size:clamp(18px,3vw,22px);letter-spacing:10px;
+    font-family:inherit;animation:btnGlow 1.8s ease-in-out infinite;
+    padding:6px 10px;
+  }
+  @keyframes btnGlow{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.05)}}
+  .open-arrow{display:block;margin:2px auto 0;color:var(--blue);font-size:13px;animation:hintDrop 1.4s ease-in-out infinite}
+  @keyframes hintDrop{0%{transform:translateY(-3px);opacity:.4}60%{transform:translateY(3px);opacity:1}100%{opacity:.4}}
+
+  /* 开场纸屑 */
+  .confetti{position:fixed;top:-24px;z-index:400;border-radius:3px;pointer-events:none;animation:cfall linear forwards}
+  @keyframes cfall{0%{transform:translateY(-6vh) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(680deg);opacity:.55}}
+
+  /* ============ 顶部导航 ============ */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(255,255,255,.88);backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(74,163,240,.16);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;letter-spacing:1px;font-size:16.5px}
+  .brand .mark{
+    width:32px;height:32px;border-radius:11px;transform:rotate(-4deg);
+    background:linear-gradient(135deg,#ffe9b8,#e6c06a 55%,#c9a15c);
+    display:flex;align-items:center;justify-content:center;
+    color:#5b3d10;font-size:16px;font-weight:900;
+    box-shadow:0 6px 14px rgba(201,161,92,.4);
+  }
+  .nav-links{display:flex;gap:4px}
+  .nav-links a{
+    color:#4a648a;font-size:13.5px;font-weight:600;padding:7px 14px;border-radius:99px;
+    transition:.25s;letter-spacing:.5px;
+  }
+  .nav-links a:hover{color:var(--blue);background:#e8f3ff}
+  .nav-links a.active{color:#fff;background:var(--grad);box-shadow:0 6px 16px rgba(47,125,224,.35)}
+
+  /* ============ 主视觉 ============ */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;text-align:center;
+    background:linear-gradient(180deg,#7cc3f8 0%,#a8d8fb 55%,#cfeafe 100%);
+    padding:150px 0 128px;
+  }
+  .hero .cloud{opacity:.85}
+  .hero .cloud.c1{width:170px;height:46px;top:16%;left:5%}
+  .hero .cloud.c2{width:120px;height:34px;top:12%;right:9%;animation-delay:1s}
+  .hero .cloud.c3{width:220px;height:54px;top:58%;left:-40px;opacity:.65}
+  .hero .cloud.c4{width:150px;height:40px;top:66%;right:-30px;opacity:.65;animation-delay:2s}
+  .hero .float{position:absolute;pointer-events:none;animation:twinkle 3s ease-in-out infinite;font-style:normal}
+  .hero .float.f1{top:26%;left:13%;font-size:30px;color:#ffd25e}
+  .hero .float.f2{top:20%;right:14%;font-size:24px;color:#fff;animation-delay:.9s}
+  .hero .float.f3{top:60%;left:18%;font-size:20px;color:#ffc14d;animation-delay:1.6s}
+  .hero .float.f4{top:56%;right:17%;font-size:24px;animation-delay:.4s}
+  .hero .float.f5{top:12%;left:36%;font-size:16px;color:#fff;animation-delay:2.1s}
+  .h-anim{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+  body.started .h-anim{opacity:1;transform:none}
+  body.started .h-anim.dl1{transition-delay:.1s}
+  body.started .h-anim.dl2{transition-delay:.25s}
+  body.started .h-anim.dl3{transition-delay:.4s}
+  body.started .h-anim.dl4{transition-delay:.55s}
+  body.started .h-anim.dl5{transition-delay:.7s}
+  .hero .inner{position:relative;z-index:2}
+  .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    background:rgba(255,255,255,.62);border:1.5px solid rgba(255,255,255,.95);
+    backdrop-filter:blur(6px);
+    padding:7px 18px;border-radius:99px;font-size:13.5px;letter-spacing:1.5px;color:var(--deep);font-weight:700;
+  }
+  .chip:nth-child(odd){transform:rotate(-1.5deg)}
+  .chip:nth-child(even){transform:rotate(1.2deg)}
+  .hero h1{
+    font-size:clamp(29px,5.4vw,54px);letter-spacing:4px;font-weight:900;line-height:1.3;color:#fff;
+    text-shadow:0 6px 22px rgba(29,95,168,.4);
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(180deg,#ffe9a8 10%,#ffd25e 55%,#f0a92c 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 3px 6px rgba(150,100,20,.35));
+  }
+  .squiggle{display:block;width:230px;max-width:70%;margin:8px auto 0}
+  .hero .sub{margin-top:18px;font-size:clamp(14px,2.4vw,18px);letter-spacing:3px;color:#fff;font-weight:700;text-shadow:0 3px 10px rgba(29,95,168,.35)}
+  .hero .verse{
+    margin-top:12px;font-size:clamp(13px,2vw,16px);color:rgba(255,255,255,.95);letter-spacing:2.5px;line-height:2.05;
+    font-family:"Xingkai SC","STXingkai","KaiTi","STKaiti",serif;
+    text-shadow:0 2px 8px rgba(29,95,168,.3);
+  }
+  .hero .cta{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border-radius:99px;
+    font-size:15.5px;letter-spacing:2px;transition:.3s;cursor:pointer;border:1.5px solid transparent;
+  }
+  .btn-main{
+    background:#fff;color:var(--deep);font-weight:800;
+    box-shadow:0 14px 34px rgba(29,95,168,.32);
+  }
+  .btn-main:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 20px 46px rgba(29,95,168,.4)}
+  .btn-ghost{border-color:rgba(255,255,255,.85);color:#fff;backdrop-filter:blur(4px);background:rgba(255,255,255,.16)}
+  .btn-ghost:hover{background:rgba(255,255,255,.3);transform:translateY(-3px)}
+  .hero-wave{position:absolute;bottom:-1px;left:0;width:100%;z-index:1}
+  .scroll-hint{
+    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+    color:rgba(29,95,168,.75);font-size:11px;letter-spacing:4px;z-index:2;font-weight:700;
+  }
+  .scroll-hint::after{
+    content:"";display:block;width:1.5px;height:26px;margin:8px auto 0;
+    background:linear-gradient(180deg,rgba(29,95,168,.8),transparent);
+    animation:drop 1.8s ease-in-out infinite;
+  }
+  @keyframes drop{0%{transform:scaleY(.2);transform-origin:top}55%{transform:scaleY(1)}100%{opacity:0;transform:scaleY(1)}}
+
+  /* ============ 区块标题胶囊 ============ */
+  section{padding:86px 0}
+  .cap{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:12px}
+  .cap .pill{
+    display:inline-flex;align-items:center;gap:12px;
+    background:var(--grad);color:#fff;
+    padding:13px 44px;border-radius:99px;font-size:clamp(19px,3vw,25px);font-weight:900;letter-spacing:4px;
+    box-shadow:0 12px 30px rgba(47,125,224,.3);
+    position:relative;
+  }
+  .cap .pill::before,.cap .pill::after{
+    content:"";width:44px;height:2.5px;border-radius:2px;
+    background:linear-gradient(90deg,transparent,#9cd0fa);
+  }
+  .cap .pill::after{background:linear-gradient(90deg,#9cd0fa,transparent)}
+  .cap .pill .ico{
+    width:36px;height:36px;border-radius:12px;flex:none;background:rgba(255,255,255,.25);
+    display:flex;align-items:center;justify-content:center;font-size:18px;
+  }
+  .sec-en{text-align:center;color:#8fb4d9;font-size:12px;letter-spacing:5px;text-transform:uppercase;margin-bottom:48px}
+
+  /* ============ 卡片通用 ============ */
+  .card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+
+  /* ============ 数据条 ============ */
+  .stats{padding:70px 0 0}
+  .stats .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+  .stat{
+    background:#fff;border-radius:20px;padding:26px 16px;text-align:center;
+    border:1px solid var(--line);box-shadow:var(--shadow);transition:.35s;
+  }
+  .stat:hover{transform:translateY(-6px) rotate(-.6deg)}
+  .stat .ic{
+    width:52px;height:52px;margin:0 auto 12px;border-radius:16px;font-size:24px;
+    display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);
+  }
+  .stat:nth-child(1) .ic{background:#e8f3ff}
+  .stat:nth-child(2) .ic{background:#eef7ff}
+  .stat:nth-child(3) .ic{background:#fff4e6}
+  .stat:nth-child(4) .ic{background:#e9f9f1}
+  .stat:nth-child(5) .ic{background:#fff8e6}
+  .stat b{display:block;font-size:clamp(26px,3.4vw,36px);font-weight:900;letter-spacing:1px}
+  .stat:nth-child(1) b{color:var(--blue)}
+  .stat:nth-child(2) b{color:var(--sky)}
+  .stat:nth-child(3) b{color:var(--orange)}
+  .stat:nth-child(4) b{color:var(--green)}
+  .stat:nth-child(5) b{color:var(--gold-deep)}
+  .stat span{display:block;margin-top:5px;color:var(--muted);font-size:12.5px;letter-spacing:1.5px}
+
+  /* ============ 企业简介 ============ */
+  .about-grid{max-width:900px;margin:0 auto}
+  .about-text{
+    position:relative;background:#fff;border-radius:26px;padding:44px 52px 40px;text-align:center;
+    border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;
+  }
+  .about-text::before{
+    content:"";position:absolute;right:-40px;top:-40px;width:170px;height:170px;border-radius:50%;
+    background-image:radial-gradient(#cfe5fb 2px,transparent 2px);background-size:14px 14px;opacity:.9;
+  }
+  .about-text::after{content:"✨";position:absolute;left:26px;top:20px;font-size:24px;opacity:.6}
+  .about-text>*{position:relative}
+  .about-text p{text-align:justify}
+  .about-text .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:800;letter-spacing:3px;font-size:13px}
+  .about-text .eyebrow::before{content:"";width:28px;height:3px;border-radius:3px;background:var(--grad)}
+  .about-text h3{font-size:clamp(24px,3.2vw,33px);color:var(--ink);font-weight:900;letter-spacing:2px;line-height:1.4;margin:10px 0 18px}
+  .about-text h3 em{font-style:normal;background:linear-gradient(180deg,#f7c64f,#e09a1f);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .about-text p{font-size:15.5px;line-height:1.95;text-align:justify;margin-bottom:14px}
+  .about-text .hl{color:var(--deep);font-weight:700;background:linear-gradient(transparent 62%,#d9ecfd 62%)}
+  .milestones{
+    display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px;border-radius:18px;
+    background:linear-gradient(135deg,#f2f8ff,#eef6ff);border:1px solid var(--line);overflow:hidden;
+  }
+  .ms{padding:16px 8px;text-align:center;position:relative}
+  .ms+.ms::before{content:"";position:absolute;left:0;top:22%;height:56%;border-left:1.5px dashed #c5def6}
+  .ms b{display:block;font-size:20px;font-weight:900;color:var(--deep);letter-spacing:.5px}
+  .ms span{display:block;font-size:12px;color:var(--muted);letter-spacing:1px;margin-top:2px}
+  .ms:nth-child(2) b{color:var(--orange)}
+  .ms:nth-child(3) b{color:var(--green)}
+  .ms:nth-child(4) b{color:var(--gold-deep)}
+
+  .idea{margin-top:64px}
+  .idea-head{text-align:center;max-width:760px;margin:0 auto 28px}
+  .idea-head h4{font-size:20px;color:var(--ink);font-weight:900;letter-spacing:3px}
+  .idea-head h4 span{color:var(--blue)}
+  .idea-head p{margin-top:8px;font-size:14.5px;color:var(--muted);line-height:1.9}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pillar{
+    position:relative;background:#fff;border-radius:22px;padding:30px 26px 26px;border:1px solid var(--line);
+    box-shadow:var(--shadow);overflow:hidden;transition:.35s;
+  }
+  .pillar:hover{transform:translateY(-6px)}
+  .pillar .no{position:absolute;right:18px;top:8px;font-size:58px;font-weight:900;color:#eef5fd;line-height:1;font-style:italic}
+  .pillar .ic{position:relative;width:54px;height:54px;border-radius:17px;font-size:25px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;transform:rotate(-4deg)}
+  .pillar:nth-child(1) .ic{background:#fff4e6}
+  .pillar:nth-child(2) .ic{background:#e8f3ff}
+  .pillar:nth-child(3) .ic{background:#e9f9f1}
+  .pillar h5{position:relative;font-size:17px;color:var(--ink);letter-spacing:2px;margin-bottom:6px}
+  .pillar p{position:relative;font-size:13.8px;color:var(--muted);line-height:1.85}
+  .pillar::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:100%}
+  .pillar:nth-child(1)::after{background:linear-gradient(90deg,#ff9d3c,#ffbd73)}
+  .pillar:nth-child(2)::after{background:linear-gradient(90deg,#2f7de0,#7cc3f8)}
+  .pillar:nth-child(3)::after{background:linear-gradient(90deg,#2eb872,#4ed39a)}
+
+  .talent{
+    margin-top:24px;display:flex;gap:22px;align-items:center;border-radius:24px;padding:28px 32px;color:#fff;
+    background:linear-gradient(135deg,#2f7de0,#4aa3f0 60%,#7cc3f8);box-shadow:0 18px 44px rgba(47,125,224,.3);
+    position:relative;overflow:hidden;
+  }
+  .talent::after{content:"✦";position:absolute;right:26px;top:10px;font-size:46px;color:rgba(255,255,255,.18)}
+  .talent .ic{flex:none;width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:30px}
+  .talent p{font-size:15px;line-height:1.9;letter-spacing:.5px}
+  .talent p b{color:#ffe28a}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .tag{
+    padding:6px 16px;border-radius:99px;font-size:13px;letter-spacing:1.5px;font-weight:700;color:#fff;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.5);
+  }
+
+  /* ============ 滑动展示（通用） ============ */
+  .sec-white{background:#fff}
+  .slider{position:relative}
+  .track{
+    display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+    padding:8px 4px 20px;scroll-padding-left:4px;scrollbar-width:none;cursor:grab;
+    -webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+  }
+  .track::-webkit-scrollbar{display:none}
+  .track.dragging{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing}
+  .track>*{flex:none;scroll-snap-align:start;margin:0}
+  .track img{-webkit-user-drag:none;user-select:none}
+  .sl-btn{
+    position:absolute;top:calc(50% - 40px);z-index:4;width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+    background:#fff;color:var(--blue);font-size:26px;font-weight:900;line-height:1;padding-bottom:3px;
+    box-shadow:0 10px 26px rgba(29,95,168,.22);transition:.25s;display:flex;align-items:center;justify-content:center;
+  }
+  .sl-btn.prev{left:-22px}
+  .sl-btn.next{right:-22px}
+  .sl-btn:hover{background:var(--grad);color:#fff;transform:scale(1.08)}
+  .sl-foot{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:4px}
+  .sl-dots{display:flex;gap:8px}
+  .sl-dots button{width:9px;height:9px;border-radius:99px;border:none;padding:0;background:#c9e0f7;cursor:pointer;transition:.3s}
+  .sl-dots button.on{width:30px;background:var(--grad)}
+  .sl-count{font-size:13px;font-weight:800;color:var(--deep);letter-spacing:2px;min-width:60px;text-align:center}
+  .sl-count i{font-style:normal;color:var(--muted);font-weight:600}
+  .sl-hint{text-align:center;font-size:12px;color:var(--muted);letter-spacing:2px;margin-top:12px}
+
+  /* ============ 环境展示和员工活动 ============ */
+  .shot{
+    position:relative;width:calc(58% - 10px);aspect-ratio:3/2;border-radius:22px;overflow:hidden;cursor:zoom-in;
+    box-shadow:var(--shadow);border:1px solid var(--line);transition:transform .35s ease;
+  }
+  .shot:hover{transform:translateY(-5px)}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .shot:hover img{transform:scale(1.06)}
+  .shot figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:44px 22px 16px;color:#fff;font-size:15px;font-weight:700;letter-spacing:2px;
+    background:linear-gradient(180deg,transparent,rgba(23,61,107,.85));
+  }
+  .shot figcaption small{display:block;font-size:12.5px;font-weight:500;opacity:.88;margin-top:2px;letter-spacing:1px}
+  .shot .kind{
+    position:absolute;top:14px;left:14px;z-index:2;color:#fff;font-size:12px;font-weight:800;letter-spacing:1.5px;
+    padding:5px 13px;border-radius:99px;box-shadow:0 6px 14px rgba(0,0,0,.18);
+  }
+  .shot .kind.k-env{background:linear-gradient(135deg,#2f7de0,#4aa3f0)}
+  .shot .kind.k-act{background:linear-gradient(135deg,#ff9d3c,#ffbd73)}
+  .gallery-note{margin-top:22px;text-align:center;color:var(--muted);font-size:13.5px;letter-spacing:2px}
+
+  /* ============ 作品鉴赏 ============ */
+  .work{
+    width:calc((100% - 60px) / 4);background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow);transition:.35s;position:relative;cursor:zoom-in;
+  }
+  .work:hover{transform:translateY(-7px);box-shadow:0 20px 44px rgba(47,125,224,.18)}
+  .work .ph{aspect-ratio:1/1.08;overflow:hidden;background:#f4f9ff}
+  .work .ph img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+  .work:hover .ph img{transform:scale(1.06)}
+  .work .info{padding:14px 14px 16px;text-align:center}
+  .work .info b{display:block;color:var(--ink);font-size:15px;letter-spacing:2px}
+  .work .info span{display:block;margin-top:3px;color:var(--muted);font-size:12.5px;letter-spacing:1px}
+  .work .badge{
+    position:absolute;top:12px;left:12px;z-index:2;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:1px;
+    padding:4px 12px;border-radius:99px;transform:rotate(-3deg);
+  }
+  .work:nth-child(3n+1) .badge{background:linear-gradient(135deg,#2f7de0,#4aa3f0);box-shadow:0 6px 14px rgba(47,125,224,.35)}
+  .work:nth-child(3n+2) .badge{background:linear-gradient(135deg,#ff9d3c,#ffb45e);box-shadow:0 6px 14px rgba(255,157,60,.4)}
+  .work:nth-child(3n+3) .badge{background:linear-gradient(135deg,#2eb872,#4ed39a);box-shadow:0 6px 14px rgba(46,184,114,.35)}
+
+  /* ============ 培养体系 ============ */
+  .grow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .grow-item{
+    background:#fff;border-radius:20px;padding:34px 24px;text-align:center;
+    border:1px solid var(--line);box-shadow:var(--shadow);position:relative;transition:.35s;overflow:hidden;
+  }
+  .grow-item:hover{transform:translateY(-7px)}
+  .grow-item::before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+  .grow-item:nth-child(1)::before{background:linear-gradient(90deg,#2f7de0,#4aa3f0)}
+  .grow-item:nth-child(2)::before{background:linear-gradient(90deg,#7cc3f8,#4aa3f0)}
+  .grow-item:nth-child(3)::before{background:linear-gradient(90deg,#ff9d3c,#ffbd73)}
+  .grow-item:nth-child(4)::before{background:linear-gradient(90deg,#2eb872,#4ed39a)}
+  .grow-item .num{
+    display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:3px;color:#fff;
+    padding:3px 14px;border-radius:99px;margin-bottom:14px;
+  }
+  .grow-item:nth-child(1) .num{background:#2f7de0}
+  .grow-item:nth-child(2) .num{background:#4aa3f0}
+  .grow-item:nth-child(3) .num{background:#ff9d3c}
+  .grow-item:nth-child(4) .num{background:#2eb872}
+  .grow-item .ic{
+    width:64px;height:64px;margin:0 auto 16px;border-radius:50%;font-size:28px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .grow-item:nth-child(1) .ic{background:#e8f3ff}
+  .grow-item:nth-child(2) .ic{background:#eef7ff}
+  .grow-item:nth-child(3) .ic{background:#fff4e6}
+  .grow-item:nth-child(4) .ic{background:#e9f9f1}
+  .grow-item h3{color:var(--ink);font-size:17.5px;letter-spacing:2px;margin-bottom:10px}
+  .grow-item p{font-size:13.8px;color:var(--muted);line-height:1.8}
+  .path{
+    margin-top:30px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;
+    background:linear-gradient(135deg,#2f7de0,#4aa3f0 55%,#7cc3f8);border-radius:22px;padding:30px 20px 24px;
+    box-shadow:0 18px 44px rgba(47,125,224,.3);
+  }
+  .path .step{
+    color:#fff;font-size:14.5px;font-weight:700;letter-spacing:1.5px;padding:9px 22px;border-radius:99px;
+    border:1.5px solid rgba(255,255,255,.6);background:rgba(255,255,255,.16);backdrop-filter:blur(4px);
+  }
+  .path .arrow{color:#eaf6ff;font-size:17px;font-weight:700}
+  .path .cap2{width:100%;text-align:center;color:rgba(255,255,255,.8);font-size:12.5px;letter-spacing:3px;margin-top:8px}
+
+  /* ============ 福利 ============ */
+  .welfare{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .wf{
+    background:#fff;border-radius:20px;padding:30px 26px;border:1px solid var(--line);
+    box-shadow:var(--shadow);transition:.35s;position:relative;overflow:hidden;
+  }
+  .wf:hover{transform:translateY(-6px)}
+  .wf h3{display:flex;align-items:center;gap:11px;color:var(--ink);font-size:16.5px;letter-spacing:1.5px;margin-bottom:16px}
+  .wf h3 .dot{
+    width:40px;height:40px;flex:none;border-radius:14px;font-size:19px;
+    display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);
+  }
+  .wf:nth-child(1) h3 .dot{background:#e8f3ff}
+  .wf:nth-child(2) h3 .dot{background:#fff4e6}
+  .wf:nth-child(3) h3 .dot{background:#e9f9f1}
+  .wf ul{list-style:none}
+  .wf li{font-size:14px;padding:7px 0 7px 20px;position:relative;border-bottom:1px dashed #e8f2fd}
+  .wf li:last-child{border-bottom:none}
+  .wf li::before{
+    content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:50%;
+    background:linear-gradient(135deg,#2f7de0,#4aa3f0);
+  }
+  .wf:nth-child(2) li::before{background:linear-gradient(135deg,#ff9d3c,#ffbd73)}
+  .wf:nth-child(3) li::before{background:linear-gradient(135deg,#2eb872,#4ed39a)}
+
+  /* ============ 岗位表 ============ */
+  .table-card{
+    position:relative;border-radius:26px;background:#fff;padding:10px;
+    box-shadow:0 22px 50px rgba(47,125,224,.14);border:1px solid var(--line);
+  }
+  .table-scroll{overflow-x:auto;border-radius:18px;-webkit-overflow-scrolling:touch}
+  table.jobs{width:100%;min-width:880px;border-collapse:separate;border-spacing:0;background:#fff;text-align:center}
+  table.jobs thead th{
+    background:linear-gradient(135deg,#2f7de0,#4aa3f0);color:#fff;font-size:14.5px;font-weight:800;letter-spacing:2px;
+    padding:17px 12px;text-align:center;vertical-align:middle;white-space:nowrap;position:relative;
+  }
+  table.jobs thead th:first-child{border-top-left-radius:18px}
+  table.jobs thead th:last-child{border-top-right-radius:18px}
+  table.jobs thead th+th::before{
+    content:"";position:absolute;left:0;top:30%;height:40%;border-left:1px solid rgba(255,255,255,.35);
+  }
+  table.jobs thead th .ti{display:block;font-size:17px;margin-bottom:2px}
+  table.jobs tbody td{
+    padding:24px 14px;font-size:13.8px;line-height:1.8;color:var(--text);text-align:center;vertical-align:middle;
+    border-bottom:1px dashed #d8e9fb;
+  }
+  table.jobs tbody tr:last-child td{border-bottom:none}
+  table.jobs tbody tr{transition:background .25s}
+  table.jobs tbody tr:nth-child(even){background:#f7fbff}
+  table.jobs tbody tr:hover{background:#eef6ff}
+  table.jobs td b{color:var(--deep)}
+  .job-cat{display:inline-flex;flex-direction:column;align-items:center;gap:8px}
+  .job-cat .ic{
+    width:52px;height:52px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:25px;
+    transform:rotate(-5deg);
+  }
+  .job-cat.mk .ic{background:linear-gradient(135deg,#fff1de,#ffe1bd);box-shadow:0 8px 18px rgba(255,157,60,.25)}
+  .job-cat.fn .ic{background:linear-gradient(135deg,#e5f1ff,#cfe5fd);box-shadow:0 8px 18px rgba(47,125,224,.22)}
+  .job-cat b{font-size:16px;font-weight:900;letter-spacing:2px;line-height:1.35}
+  .job-cat.mk b{color:#d4740f}
+  .job-cat.fn b{color:var(--deep)}
+  .roles{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:8px 0}
+  .roles span{
+    font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:99px;background:#eaf4ff;color:var(--deep);
+    border:1px solid #d3e7fc;white-space:nowrap;
+  }
+  .mk-row .roles span{background:#fff4e6;color:#c96f10;border-color:#f8dfb8}
+  .path-txt{font-size:12.5px;color:var(--muted)}
+  .num{
+    display:inline-flex;align-items:baseline;justify-content:center;gap:2px;width:64px;height:64px;border-radius:50%;
+    background:#fff;border:2px solid #cfe5fd;color:var(--blue);font-weight:900;font-size:26px;line-height:64px;
+    box-shadow:0 6px 16px rgba(47,125,224,.12);
+  }
+  .num small{font-size:12px;font-weight:700;color:var(--muted)}
+  .mk-row .num{color:var(--orange);border-color:#ffd9ab}
+  .edu{display:inline-block;padding:5px 14px;border-radius:10px;background:#f0f6ff;color:var(--deep);font-weight:800;white-space:nowrap}
+  .req-list{list-style:none;display:inline-block;text-align:left;margin:0;padding:0}
+  .req-list li{position:relative;padding-left:16px;margin:3px 0}
+  .req-list li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#4aa3f0,#2f7de0)}
+  .mk-row .req-list li::before{background:linear-gradient(135deg,#ffbd73,#ff9d3c)}
+  .major em{font-style:normal;display:block;font-size:12.5px;color:var(--muted)}
+  .pay{
+    display:inline-flex;flex-direction:column;align-items:center;padding:12px 16px;border-radius:18px;
+    background:linear-gradient(135deg,#fff6dc,#ffe7a8);border:1.5px solid #f3d27e;
+    box-shadow:0 10px 22px rgba(230,181,76,.28);white-space:nowrap;
+  }
+  .pay b{font-size:21px;font-weight:900;letter-spacing:.5px;color:#b06d00 !important;line-height:1.2}
+  .pay span{font-size:12px;color:#a2772a;font-weight:700;letter-spacing:2px}
+  .swipe-tip{display:none;text-align:center;font-size:12px;color:var(--muted);letter-spacing:2px;margin-top:10px}
+  .jobs-note{
+    margin-top:18px;display:flex;align-items:center;justify-content:center;text-align:center;gap:10px;
+    background:linear-gradient(135deg,#fff4e6,#fef1dc);border:1.5px dashed #f0c877;border-radius:16px;padding:15px 20px;
+    font-size:13.8px;color:#92610c;
+  }
+  .jobs-note b{flex:none}
+
+  /* ============ 要求 ============ */
+  .reqs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .req{
+    background:#fff;border-radius:20px;padding:30px 26px;border:1px solid var(--line);
+    box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start;transition:.35s;
+  }
+  .req:hover{transform:translateY(-5px) rotate(-.5deg)}
+  .req .no{
+    flex:none;width:44px;height:44px;border-radius:15px;font-weight:900;font-size:18px;color:#fff;
+    display:flex;align-items:center;justify-content:center;transform:rotate(-4deg);
+  }
+  .req:nth-child(1) .no{background:linear-gradient(135deg,#2f7de0,#4aa3f0);box-shadow:0 8px 18px rgba(47,125,224,.3)}
+  .req:nth-child(2) .no{background:linear-gradient(135deg,#ff9d3c,#ffbd73);box-shadow:0 8px 18px rgba(255,157,60,.35)}
+  .req:nth-child(3) .no{background:linear-gradient(135deg,#2eb872,#4ed39a);box-shadow:0 8px 18px rgba(46,184,114,.3)}
+  .req p{font-size:14.5px;color:var(--text)}
+
+  /* ============ 流程 ============ */
+  .flow{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;gap:0}
+  .flow .fs{flex:1;min-width:132px;text-align:center;position:relative;padding:0 6px}
+  .flow .fs .b{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 8px 18px;
+    box-shadow:var(--shadow);transition:.3s;height:100%;
+  }
+  .flow .fs:hover .b{transform:translateY(-5px);border-color:#b9dcfa}
+  .flow .fs .b i{
+    font-style:normal;display:flex;align-items:center;justify-content:center;
+    width:50px;height:50px;margin:0 auto 10px;border-radius:50%;font-size:22px;color:#fff;
+  }
+  .flow .fs:nth-child(6n+1) .b i{background:linear-gradient(135deg,#2f7de0,#4aa3f0)}
+  .flow .fs:nth-child(6n+2) .b i{background:linear-gradient(135deg,#7cc3f8,#4aa3f0)}
+  .flow .fs:nth-child(6n+3) .b i{background:linear-gradient(135deg,#ff9d3c,#ffbd73)}
+  .flow .fs:nth-child(6n+4) .b i{background:linear-gradient(135deg,#e6b54c,#f2c94c)}
+  .flow .fs:nth-child(6n+5) .b i{background:linear-gradient(135deg,#2eb872,#4ed39a)}
+  .flow .fs:nth-child(6n+6) .b i{background:linear-gradient(135deg,#ec6ea5,#f79cc0)}
+  .flow .fs .b b{display:block;color:var(--ink);font-size:14.5px;letter-spacing:1px}
+  .flow .fs:not(:last-child)::after{
+    content:"➜";position:absolute;right:-13px;top:50%;transform:translateY(-60%);
+    color:#7cc3f8;font-size:19px;font-weight:700;z-index:2;
+  }
+
+  /* ============ 投递 ============ */
+  .apply-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .ap{
+    background:#fff;border-radius:20px;padding:34px 26px;border:1px solid var(--line);
+    box-shadow:var(--shadow);text-align:center;transition:.35s;position:relative;overflow:hidden;
+  }
+  .ap:hover{transform:translateY(-6px)}
+  .ap .ic{
+    width:60px;height:60px;margin:0 auto 16px;border-radius:50%;font-size:26px;color:#fff;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .ap:nth-child(1) .ic{background:linear-gradient(135deg,#2f7de0,#4aa3f0);box-shadow:0 12px 26px rgba(47,125,224,.35)}
+  .ap:nth-child(2) .ic{background:linear-gradient(135deg,#ff9d3c,#ffbd73);box-shadow:0 12px 26px rgba(255,157,60,.4)}
+  .ap:nth-child(3) .ic{background:linear-gradient(135deg,#2eb872,#4ed39a);box-shadow:0 12px 26px rgba(46,184,114,.35)}
+  .ap h3{color:var(--ink);font-size:16.5px;letter-spacing:2px;margin-bottom:12px}
+  .ap p{font-size:14px;color:var(--text);word-break:break-all}
+  .ap p b{color:var(--deep)}
+  .ap .tip{
+    margin-top:12px;display:inline-block;font-size:12.5px;color:var(--deep);
+    background:#e8f3ff;border-radius:99px;padding:5px 15px;letter-spacing:1px;
+  }
+
+  /* ============ QA ============ */
+  .qa-list{max-width:820px;margin:0 auto;display:grid;gap:16px}
+  details{
+    background:#fff;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow);
+    overflow:hidden;transition:.3s;
+  }
+  details[open]{border-color:#b9dcfa}
+  summary{
+    list-style:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;gap:14px;
+    font-size:15.5px;font-weight:800;color:var(--ink);letter-spacing:1px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary .q{
+    flex:none;width:34px;height:34px;border-radius:11px;background:var(--grad);
+    color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:13px;
+    transform:rotate(-3deg);
+  }
+  summary .arr{margin-left:auto;color:#7cc3f8;transition:.3s;font-size:13px}
+  details[open] .arr{transform:rotate(180deg)}
+  .answer{padding:0 24px 20px 72px;font-size:14.5px;color:var(--text);line-height:1.9}
+  .answer b{color:var(--deep)}
+
+  /* ============ 标语带 ============ */
+  .slogan-wrap{position:relative;background:var(--bg)}
+  .slogan-wave{display:block;width:100%;margin-bottom:-1px}
+  .slogan-band{
+    background:linear-gradient(180deg,#6ab4f5 0%,#2f7de0 60%,#1d5fa8 100%);
+    color:#fff;text-align:center;padding:78px 22px 72px;position:relative;overflow:hidden;
+  }
+  .slogan-band .cloud{opacity:.35}
+  .slogan-band .cloud.c1{width:170px;height:44px;top:14%;left:6%}
+  .slogan-band .cloud.c2{width:120px;height:34px;top:22%;right:8%;animation-delay:1.4s}
+  .slogan-band h2{
+    position:relative;z-index:2;
+    font-size:clamp(22px,4vw,34px);letter-spacing:5px;font-weight:900;
+    text-shadow:0 8px 30px rgba(9,44,84,.35);
+  }
+  .slogan-band p{position:relative;z-index:2;margin-top:14px;color:rgba(255,255,255,.9);font-size:14.5px;letter-spacing:3px}
+  .qr-row{position:relative;z-index:2;display:flex;gap:30px;justify-content:center;margin-top:42px;flex-wrap:wrap}
+  .qr{
+    width:184px;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.5);
+    border-radius:22px;padding:14px 14px 16px;backdrop-filter:blur(6px);transition:transform .3s;
+  }
+  .qr:hover{transform:translateY(-6px)}
+  .qr .box{
+    aspect-ratio:1;border-radius:14px;background:#fff;padding:10px;
+    box-shadow:0 10px 24px rgba(9,44,84,.25);
+  }
+  .qr .box img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}
+  .qr p{margin-top:12px;font-size:15px;font-weight:800;color:#fff;letter-spacing:2px}
+  .qr span{display:block;margin-top:2px;font-size:12px;color:rgba(255,255,255,.8);letter-spacing:1px}
+  footer{
+    background:#123a66;color:#7fa3c9;text-align:center;padding:26px 20px;font-size:12.5px;letter-spacing:1.5px;
+    border-top:1px solid rgba(124,195,248,.2);
+  }
+  footer b{color:#9cd0fa;font-weight:600}
+
+  /* ============ 动效 ============ */
+  .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+  .rv.on{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  /* 灯箱 */
+  .lightbox{
+    position:fixed;inset:0;z-index:200;background:rgba(18,58,102,.92);backdrop-filter:blur(6px);
+    display:none;align-items:center;justify-content:center;padding:40px;cursor:zoom-out;
+  }
+  .lightbox.show{display:flex}
+  .lightbox img{max-width:min(1100px,92vw);max-height:88vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+
+  /* 返回顶部 */
+  .totop{
+    position:fixed;right:26px;bottom:30px;z-index:90;width:46px;height:46px;border-radius:50%;
+    background:var(--grad);color:#fff;border:none;cursor:pointer;
+    font-size:18px;box-shadow:0 12px 26px rgba(47,125,224,.4);opacity:0;pointer-events:none;transition:.35s;
+  }
+  .totop.show{opacity:1;pointer-events:auto}
+  .totop:hover{transform:translateY(-4px)}
+
+  /* ============ 响应式 ============ */
+  @media (max-width:960px){
+    .nav-links{display:none}
+    .stats .grid{grid-template-columns:repeat(3,1fr);gap:26px 12px}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-pics{max-width:520px;margin:0 auto;width:100%}
+    .pillars{grid-template-columns:1fr}
+    .shot{width:calc(82% - 10px)}
+    .work{width:calc((100% - 40px) / 2.4)}
+    .sl-btn.prev{left:-8px}.sl-btn.next{right:-8px}
+    .grow{grid-template-columns:repeat(2,1fr)}
+    .welfare,.reqs,.apply-grid{grid-template-columns:1fr}
+    .flow .fs{min-width:31%}
+    .flow .fs:not(:last-child)::after{display:none}
+  }
+  @media (max-width:620px){
+    .hero{padding:118px 0 106px}
+    section{padding:62px 0}
+    .stats{padding-top:56px}
+    .milestones{grid-template-columns:repeat(2,1fr)}
+    .ms:nth-child(3)::before{display:none}
+    .ms:nth-child(n+3){border-top:1.5px dashed #c5def6}
+    .talent{flex-direction:column;text-align:center;padding:26px 20px}
+    .tags{justify-content:center}
+    .about-text{padding:34px 22px 28px}
+    .shot{width:88%}
+    .work{width:64%}
+    .sl-btn{display:none}
+    .grow{grid-template-columns:1fr}
+    .flow .fs{min-width:47%}
+    table.jobs tbody td{padding:18px 10px;font-size:12.8px}
+    .table-card{padding:6px;border-radius:20px}
+    .swipe-tip{display:block}
+    .answer{padding-left:24px}
+    .cover-inner{padding-top:56px}
+    .cover-title{letter-spacing:4px}
+    .mate .say{font-size:11px;padding:4px 9px}
+    .mate figcaption{font-size:11px}
+    .m-left .say,.m-right .say{display:none}
+    .m-left{left:-2%}.m-right{right:-2%}
+    .cover-art{height:min(300px,40vh)}
+    .mate img{height:calc(min(300px,40vh) - 44px)}
+    .m-left img,.m-right img{height:calc(min(300px,40vh) - 84px)}
+  }
+  @media (max-height:720px){
+    .cover-art{height:min(320px,42vh)}
+    .mate img{height:calc(min(320px,42vh) - 44px)}
+    .m-left img,.m-right img{height:calc(min(320px,42vh) - 84px)}
+    .cover-inner{padding-top:46px}
+    .cover-title{font-size:clamp(36px,7vw,54px)}
+    .offer-box{width:96px;margin-top:2px}
+    #openBtn{margin-top:4px}
+  }
+</style>
+</head>
+<body class="locked">
+
+<!-- ================= 开场封面（参照：天空/路牌/OFFER） ================= -->
+<div id="cover">
+  <span class="cloud c1" style="top:9%;left:7%"></span>
+  <span class="cloud c2" style="top:20%;right:10%"></span>
+  <span class="cloud c1" style="top:56%;left:-30px;opacity:.75;animation-delay:1.6s"></span>
+  <span class="cloud c2" style="top:66%;right:-20px;opacity:.75;animation-delay:2.4s"></span>
+  <span class="cover-fade"></span>
+
+  <div class="cover-corner"><span class="dot"></span>粤豪珠宝 · YUEHAO GROUP</div>
+
+  <span class="cover-star st1"><em>✦</em></span>
+  <span class="cover-star st2"><em>✧</em></span>
+  <span class="cover-star st3"><em>✦</em></span>
+  <span class="cover-star st4"><em>✧</em></span>
+  <span class="cover-star st5"><em>✦</em></span>
+  <span class="cover-star st6"><em>✧</em></span>
+
+  <div class="cover-inner">
+    <h2 class="cover-title brush">少年，自成<em>璀璨</em><span class="spark">✨</span></h2>
+    <p class="cover-sub">2027届粤豪珠宝校园招聘 · 以青春之名，赴真金之约</p>
+
+    <!-- 动漫校园人物插画 -->
+    <div class="cover-art">
+      <figure class="mate m-left">
+        <img src="assets/char-girl-sakura.jpg" alt="长发学姐竖起手指">
+        <figcaption>学姐 · 职能类</figcaption>
+        <span class="say">这里超适合成长！</span>
+      </figure>
+      <figure class="mate m-right">
+        <img src="assets/char-girl-thumb.jpg" alt="浅蓝外套女生点赞">
+        <figcaption>同学 · 2027届</figcaption>
+        <span class="say">粤豪 Offer 冲！</span>
+      </figure>
+      <figure class="mate m-center">
+        <img src="assets/char-boy.jpg" alt="蓝色卫衣男生挥手打招呼">
+        <figcaption>学长 · 营销类</figcaption>
+        <span class="say">嗨～一起出发！</span>
+      </figure>
+      <span class="art-tag t1">🎓 2027届</span>
+      <span class="art-tag t2">💎 YUEHAO STATION</span>
+    </div>
+
+    <!-- OFFER 公文包 -->
+    <div class="offer-box" aria-hidden="true">
+      <svg viewBox="0 0 220 118" xmlns="http://www.w3.org/2000/svg">
+        <path d="M85,34 v-10 a12,12 0 0 1 12,-12 h26 a12,12 0 0 1 12,12 v10" fill="none" stroke="#1d4fa8" stroke-width="8" stroke-linecap="round"/>
+        <rect x="33" y="32" width="154" height="78" rx="13" fill="#2f6fd6" stroke="#1d4fa8" stroke-width="4"/>
+        <rect x="100" y="24" width="20" height="16" rx="5" fill="#ffd25e" stroke="#e8b73c" stroke-width="3"/>
+        <text x="110" y="83" text-anchor="middle" fill="#ffd25e" font-size="30" font-weight="900" letter-spacing="3" font-family="Georgia,serif">OFFER</text>
+        <path d="M46,44 q30,-7 62,-5" stroke="rgba(255,255,255,.35)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <button id="openBtn">点 击 开 启<span class="open-arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- ================= 主页面 ================= -->
+<div id="page">
+
+  <!-- 导航 -->
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="mark">粤</span>粤豪珠宝 · 2027届校招</a>
+      <div class="nav-links">
+        <a href="#about">企业简介</a>
+        <a href="#env">环境与活动</a>
+        <a href="#works">作品鉴赏</a>
+        <a href="#grow">培养体系</a>
+        <a href="#jobs">招聘岗位</a>
+        <a href="#apply">投递方式</a>
+        <a href="#qa">常见问答</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主视觉 -->
+  <header class="hero" id="top">
+    <span class="cloud c1"></span>
+    <span class="cloud c2"></span>
+    <span class="cloud c3"></span>
+    <span class="cloud c2" style="top:64%;right:6%"></span>
+    <span class="float f1">✦</span>
+    <span class="float f2">✧</span>
+    <span class="float f3">✦</span>
+    <span class="float f4">✧</span>
+    <span class="float f5">✦</span>
+    <div class="wrap inner">
+      <div class="chips h-anim">
+        <span class="chip">🎓 2027届应届生</span>
+        <span class="chip">🔥 热招进行时</span>
+        <span class="chip">💎 深圳本土头部珠宝企业</span>
+      </div>
+      <h1 class="h-anim dl1">粤豪珠宝 · <em>2027届校园招聘</em></h1>
+      <svg class="squiggle h-anim dl2" viewBox="0 0 230 14" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sqg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffd25e"/><stop offset=".5" stop-color="#ffc14d"/><stop offset="1" stop-color="#ffe9a8"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 10 C 36 2, 66 13, 98 7 S 160 2, 226 8" stroke="url(#sqg)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p class="sub h-anim dl2">筑梦璀璨，职启粤豪 ｜ 深耕珠宝赛道，赋能青年成长</p>
+      <p class="verse h-anim dl3">
+        百年银楼，薪火相传，淬炼真金本色<br>
+        少年执梦，步履不停，恰逢璀璨之时
+      </p>
+      <div class="cta h-anim dl4">
+        <a class="btn btn-main" href="#jobs">🚀 查看招聘岗位</a>
+        <a class="btn btn-ghost" href="#apply">📮 投递简历</a>
+      </div>
+    </div>
+    <div class="scroll-hint h-anim dl5">SCROLL</div>
+    <svg class="hero-wave" viewBox="0 0 1440 92" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,58 C220,96 460,6 720,34 C980,62 1220,14 1440,44 L1440,92 L0,92 Z" fill="#f2f9ff"/>
+    </svg>
+  </header>
+
+  <!-- 数据条 -->
+  <div class="stats">
+    <div class="wrap grid">
+      <div class="stat rv"><span class="ic">🏛</span><b>1920</b><span>源自百年老字号泰昌银楼</span></div>
+      <div class="stat rv d1"><span class="ic">🏭</span><b>12+</b><span>核心生产工厂 · 近千家协作工厂</span></div>
+      <div class="stat rv d2"><span class="ic">💎</span><b>10万+</b><span>全品类产品资源</span></div>
+      <div class="stat rv d3"><span class="ic">🤝</span><b>3700+</b><span>服务全国珠宝品牌</span></div>
+      <div class="stat rv d3"><span class="ic">🛍️</span><b>3万+</b><span>覆盖终端渠道</span></div>
+    </div>
+  </div>
+
+  <!-- 企业简介 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">🏢</span>企业简介</span></div>
+      <p class="sec-en">About Yuehao Jewelry</p>
+
+      <div class="about-grid">
+        <div class="about-text rv">
+          <span class="eyebrow">关于粤豪 · YUEHAO</span>
+          <h3>源自百年银楼<br>深耕<em>黄金珠宝全产业链</em></h3>
+          <p>粤豪珠宝（深圳市粤豪珠宝有限公司），源自1920年百年老字号泰昌银楼，2003年正式规模化运营，是国内黄金珠宝行业兼具<span class="hl">文化底蕴</span>与<span class="hl">全产业链实力</span>的头部企业。</p>
+          <p>深耕行业二十余年，公司构建了集<span class="hl">原创研发、精工制造、全域供应链、数字化运营</span>于一体的完整产业体系，实力稳居行业前列。目前拥有12家核心生产工厂、近千家协作工厂，产品覆盖黄金、铂金、K金、玉石、彩宝等全品类，坐拥超10万款产品资源，服务全国3700+珠宝品牌、3万+终端渠道，市场规模与行业影响力雄厚。</p>
+          <div class="milestones">
+            <div class="ms"><b>1920</b><span>泰昌银楼创立</span></div>
+            <div class="ms"><b>2003</b><span>正式规模化运营</span></div>
+            <div class="ms"><b>20+年</b><span>深耕黄金珠宝</span></div>
+            <div class="ms"><b>全品类</b><span>金·铂·K金·玉·彩宝</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="idea">
+        <div class="idea-head rv">
+          <h4>发展理念 · <span>传统工艺 + 现代创新 + 数字化赋能</span></h4>
+          <p>严控产品品质、深耕原创设计，以标准化、数字化、规模化的优势，引领行业高质量发展。</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar rv"><span class="no">01</span><div class="ic">🔨</div><h5>传统工艺</h5><p>源自百年银楼，严控产品品质。</p></div>
+          <div class="pillar rv d1"><span class="no">02</span><div class="ic">💡</div><h5>现代创新</h5><p>深耕原创设计，覆盖黄金、铂金、K金、玉石、彩宝等全品类。</p></div>
+          <div class="pillar rv d2"><span class="no">03</span><div class="ic">📊</div><h5>数字化赋能</h5><p>以标准化、数字化、规模化的优势，引领行业高质量发展。</p></div>
+        </div>
+        <div class="talent rv">
+          <div class="ic">🎓</div>
+          <div>
+            <p>同时高度重视<b>应届人才培养</b>，依托成熟的产业平台、完善的培养体系和清晰的晋升通道，为青年学子提供扎根行业、快速成长、实现价值的优质职业平台。</p>
+            <div class="tags">
+              <span class="tag">深圳本土头部企业</span>
+              <span class="tag">全产业链平台</span>
+              <span class="tag">规范化管理</span>
+              <span class="tag">专属校招培养</span>
+              <span class="tag">行业核心地位</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 环境展示和员工活动 -->
+  <section id="env" class="dots">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">🌈</span>环境展示和员工活动</span></div>
+      <p class="sec-en">Workplace &amp; Activities</p>
+      <div class="slider rv" data-autoplay="4500">
+        <button class="sl-btn prev" aria-label="上一张">‹</button>
+        <div class="track">
+          <figure class="shot" data-full="assets/env-hall.jpg">
+            <span class="kind k-env">办公环境</span>
+            <img src="assets/env-hall.jpg" alt="粤豪珠宝前台大厅" loading="lazy">
+            <figcaption>🏢 公司前台 · 迎宾大堂<small>「百年传承」艺术展厅入口</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-lobby.jpg">
+            <span class="kind k-env">办公环境</span>
+            <img src="assets/env-lobby.jpg" alt="电梯厅休息区" loading="lazy">
+            <figcaption>☕ 电梯厅 · 会客休息区<small>舒适的等候与交流空间</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-office.jpg">
+            <span class="kind k-env">办公环境</span>
+            <img src="assets/env-office.jpg" alt="开放办公区" loading="lazy">
+            <figcaption>💻 开放办公区 · 明亮通透<small>现代化工位，协作高效</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-meeting.jpg">
+            <span class="kind k-env">办公环境</span>
+            <img src="assets/env-meeting.jpg" alt="会议室" loading="lazy">
+            <figcaption>📋 会议室 · 商务洽谈空间<small>通透落地窗，明亮开阔</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-birthday.jpg">
+            <span class="kind k-act">员工活动</span>
+            <img src="assets/env-birthday.jpg" alt="员工生日会" loading="lazy">
+            <figcaption>🎂 员工生日会 · 温暖有爱<small>员工集体生日会</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-club.jpg">
+            <span class="kind k-act">员工活动</span>
+            <img src="assets/env-club.jpg" alt="兴趣社团活动" loading="lazy">
+            <figcaption>🎨 兴趣社团 · 手作彩绘<small>工作之余，发现更多热爱</small></figcaption>
+          </figure>
+          <figure class="shot" data-full="assets/env-team.jpg">
+            <span class="kind k-act">员工活动</span>
+            <img src="assets/env-team.jpg" alt="团队主题活动" loading="lazy">
+            <figcaption>🎉 团队主题活动 · 凝聚同行<small>一起出发，一起成长</small></figcaption>
+          </figure>
+        </div>
+        <button class="sl-btn next" aria-label="下一张">›</button>
+        <div class="sl-foot"><div class="sl-dots"></div><span class="sl-count"></span></div>
+      </div>
+      <p class="gallery-note">▍ 罗湖水贝核心商圈 · IBC环球商务中心 · 地铁通勤便利 · 舒适办公环境</p>
+    </div>
+  </section>
+
+  <!-- 作品鉴赏 -->
+  <section id="works" class="sec-white">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">💎</span>作品鉴赏</span></div>
+      <p class="sec-en">Craftsmanship Highlights</p>
+      <div class="slider rv" data-autoplay="3800">
+        <button class="sl-btn prev" aria-label="上一张">‹</button>
+        <div class="track">
+        <figure class="work" data-full="assets/work-butterfly.jpg">
+          <span class="badge">原创设计</span>
+          <div class="ph"><img src="assets/work-butterfly.jpg" alt="花丝珐琅蝴蝶项链" loading="lazy"></div>
+          <div class="info"><b>花丝珐琅 · 蝶影</b><span>黄金项链 ｜ 原创设计</span></div>
+        </figure>
+        <figure class="work" data-full="assets/work-necklace.jpg">
+          <span class="badge">古法金艺</span>
+          <div class="ph"><img src="assets/work-necklace.jpg" alt="古法金镶嵌项链" loading="lazy"></div>
+          <div class="info"><b>古法金 · 流光</b><span>黄金镶嵌项链 ｜ 精工制造</span></div>
+        </figure>
+        <figure class="work" data-full="assets/work-display1.jpg">
+          <span class="badge">展厅陈列</span>
+          <div class="ph"><img src="assets/work-display1.jpg" alt="展厅艺术陈列" loading="lazy"></div>
+          <div class="info"><b>国韵金艺 · 陈列</b><span>展厅艺术装置 ｜ 文化典藏</span></div>
+        </figure>
+        <figure class="work" data-full="assets/work-display2.jpg">
+          <span class="badge">匠心典藏</span>
+          <div class="ph"><img src="assets/work-display2.jpg" alt="典藏工艺作品" loading="lazy"></div>
+          <div class="info"><b>匠心典藏</b><span>工艺摆件 ｜ 传统工艺</span></div>
+        </figure>
+        <figure class="work" data-full="assets/work-jade.jpg">
+          <span class="badge">金玉良缘</span>
+          <div class="ph"><img src="assets/work-jade.jpg" alt="金镶玉吊坠" loading="lazy"></div>
+          <div class="info"><b>金玉良缘</b><span>金镶玉吊坠 ｜ 玉石镶嵌</span></div>
+        </figure>
+        <figure class="work" data-full="assets/work-teapot.jpg">
+          <span class="badge">鎏金茶韵</span>
+          <div class="ph"><img src="assets/work-teapot.jpg" alt="黄金茶器" loading="lazy"></div>
+          <div class="info"><b>鎏金茶韵</b><span>黄金茶器 ｜ 精品器物</span></div>
+        </figure>
+      </div>
+        <button class="sl-btn next" aria-label="下一张">›</button>
+        <div class="sl-foot"><div class="sl-dots"></div><span class="sl-count"></span></div>
+      </div>
+      <p class="sl-hint">← 左右滑动 / 拖动查看更多作品 →</p>
+    </div>
+  </section>
+
+  <!-- 培养体系 -->
+  <section id="grow" class="dots">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">🎓</span>应届生专属培养体系</span></div>
+      <p class="sec-en">Campus Talent Program</p>
+      <div class="grow">
+        <div class="grow-item rv">
+          <span class="num">STEP 01</span>
+          <div class="ic">🧑‍🏫</div>
+          <h3>三导师带教</h3>
+          <p>岗位导师 + 部门导师 + 人力导师<br>全方位护航成长</p>
+        </div>
+        <div class="grow-item rv d1">
+          <span class="num">STEP 02</span>
+          <div class="ic">📚</div>
+          <h3>新人集训</h3>
+          <p>岗前系统培训<br>零行业经验可快速融入与成长</p>
+        </div>
+        <div class="grow-item rv d2">
+          <span class="num">STEP 03</span>
+          <div class="ic">🔄</div>
+          <h3>轮岗历练</h3>
+          <p>多模块结构化轮岗学习<br>精准匹配个人优势赛道</p>
+        </div>
+        <div class="grow-item rv d3">
+          <span class="num">STEP 04</span>
+          <div class="ic">🚀</div>
+          <h3>透明晋升</h3>
+          <p>能力优先、不唯资历<br>晋升路径清晰可见</p>
+        </div>
+      </div>
+      <div class="path rv">
+        <span class="step">应届生</span><span class="arrow">➜</span>
+        <span class="step">业务骨干</span><span class="arrow">➜</span>
+        <span class="step">管理储备</span><span class="arrow">➜</span>
+        <span class="step">核心管理岗</span>
+        <span class="cap2">—— 晋升发展双通道 · 能力优先，不唯资历 ——</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 薪资福利 -->
+  <section id="welfare" class="sec-white">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">🎁</span>薪资福利</span></div>
+      <p class="sec-en">Salary &amp; Benefits</p>
+      <div class="welfare">
+        <div class="wf rv">
+          <h3><span class="dot">📋</span>保障与激励</h3>
+          <ul>
+            <li>五险一金 + 团体意外险</li>
+            <li>年度激励奖金</li>
+            <li>法定节假日 + 带薪年假</li>
+            <li>年度健康体检</li>
+          </ul>
+        </div>
+        <div class="wf rv d1">
+          <h3><span class="dot">🎉</span>关怀与生活</h3>
+          <ul>
+            <li>生日福利、节日礼包</li>
+            <li>珠宝内购专属优惠</li>
+            <li>兴趣社团、定期团建</li>
+            <li>员工食堂（免费三餐）+ 员工宿舍</li>
+          </ul>
+        </div>
+        <div class="wf rv d2">
+          <h3><span class="dot">🚌</span>通勤与环境</h3>
+          <ul>
+            <li>班车接送，下班交通补贴</li>
+            <li>地铁通勤便利</li>
+            <li>舒适现代化办公环境</li>
+            <li>水贝核心商圈区位</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 招聘岗位 -->
+  <section id="jobs" class="dots">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">🔥</span>招聘岗位 · 2027届应届毕业生</span></div>
+      <p class="sec-en">Open Positions</p>
+      <div class="table-card rv">
+        <div class="table-scroll">
+        <table class="jobs">
+          <thead>
+            <tr>
+              <th style="width:12%">岗位类别</th>
+              <th style="width:24%">培养通道</th>
+              <th style="width:8%">人数</th>
+              <th style="width:9%">学历</th>
+              <th style="width:15%">专业要求</th>
+              <th style="width:19%">任职要求</th>
+              <th style="width:13%">薪资范围</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="mk-row">
+              <td><div class="job-cat mk"><span class="ic">🛍️</span><b>营销类<br>管培生</b></div></td>
+              <td>
+                <div class="path-txt">宽口径成长通道，入职可从以下岗位起步</div>
+                <div class="roles"><span>展厅导购</span><span>业务销售</span><span>客服</span></div>
+                <div class="path-txt">后续向营销体系核心骨干方向深耕发展</div>
+              </td>
+              <td><span class="num">5<small>人</small></span></td>
+              <td><span class="edu">本科</span></td>
+              <td class="major">大部分岗位不限专业<em>客服管培生：珠宝专业优先</em></td>
+              <td>
+                <ul class="req-list">
+                  <li>形象气质佳，有优秀的逻辑思维及沟通表达能力</li>
+                  <li>优秀的团队协作能力</li>
+                  <li>诚实守信，无不良记录，维护品牌声誉</li>
+                </ul>
+              </td>
+              <td><div class="pay"><b>7W-15W</b><span>/ 年</span></div></td>
+            </tr>
+            <tr class="fn-row">
+              <td><div class="job-cat fn"><span class="ic">💼</span><b>职能类<br>管培生</b></div></td>
+              <td>
+                <div class="path-txt">宽口径成长通道，可从以下岗位入职</div>
+                <div class="roles"><span>商城运营</span><span>直播运营</span><span>数据运营</span><span>财务</span><span>总裁办</span></div>
+                <div class="path-txt">后续向职能体系核心骨干方向深耕发展</div>
+              </td>
+              <td><span class="num">7<small>人</small></span></td>
+              <td><span class="edu">本科及以上</span></td>
+              <td class="major">大部分岗位不限专业<em>财务管培生：财务会计相关专业</em></td>
+              <td>优秀的系统性思考能力；在校或实习期间，有过 <b>AI 在自身专业应用的实践经验</b>者加分</td>
+              <td><div class="pay"><b>7W-15W</b><span>/ 年</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <p class="swipe-tip">← 表格可左右滑动查看 →</p>
+      <div class="jobs-note rv"><b>✦ 备注：</b>优秀应届生可跨专业投递，无需行业经验，公司统一培训。</div>
+    </div>
+  </section>
+
+  <!-- 应聘要求 + 流程 -->
+  <section id="flow" class="sec-white">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">✅</span>通用应聘要求</span></div>
+      <p class="sec-en">Requirements</p>
+      <div class="reqs">
+        <div class="req rv"><span class="no">1</span><p>2027届<b>全日制本科 / 硕士</b>应届毕业生；</p></div>
+        <div class="req rv d1"><span class="no">2</span><p>学习能力强、踏实负责、沟通协作良好；</p></div>
+        <div class="req rv d2"><span class="no">3</span><p>热爱珠宝行业，愿意<b>长期在深圳发展</b>。</p></div>
+      </div>
+
+      <div class="cap" style="margin-top:70px"><span class="pill"><span class="ico">🧭</span>校招流程</span></div>
+      <p class="sec-en">Recruitment Process</p>
+      <div class="flow rv">
+        <div class="fs"><div class="b"><i>📄</i><b>简历投递</b></div></div>
+        <div class="fs"><div class="b"><i>💬</i><b>HR初试</b></div></div>
+        <div class="fs"><div class="b"><i>🧠</i><b>线上测评</b></div></div>
+        <div class="fs"><div class="b"><i>📊</i><b>专业复试</b></div></div>
+        <div class="fs"><div class="b"><i>👔</i><b>高管终试</b></div></div>
+        <div class="fs"><div class="b"><i>🎉</i><b>发放Offer</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投递方式 -->
+  <section id="apply" class="dots">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">📮</span>投递方式</span></div>
+      <p class="sec-en">How to Apply</p>
+      <div class="apply-grid">
+        <div class="ap rv">
+          <div class="ic">📩</div>
+          <h3>线上投递</h3>
+          <p>简历发送至 HR 邮箱<br><b>huxiubao@yhgroup.com</b></p>
+          <span class="tip">邮件主题：秋招+姓名+学校+应聘岗位</span>
+        </div>
+        <div class="ap rv d1">
+          <div class="ic">📍</div>
+          <h3>线下投递</h3>
+          <p>线下双选会<br><b>【粤豪珠宝展位】</b>现场投递</p>
+          <span class="tip">欢迎现场交流咨询</span>
+        </div>
+        <div class="ap rv d2">
+          <div class="ic">🏢</div>
+          <h3>公司地址</h3>
+          <p>深圳市罗湖区水贝<br><b>IBC环球商务中心 B座 21-25楼</b></p>
+          <span class="tip">🚇 地铁通勤便利</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问答 -->
+  <section id="qa" class="sec-white">
+    <div class="wrap">
+      <div class="cap"><span class="pill"><span class="ico">💬</span>常见 Q&amp;A</span></div>
+      <p class="sec-en">Frequently Asked Questions</p>
+      <div class="qa-list">
+        <details class="rv" open>
+          <summary><span class="q">Q1</span>无珠宝行业经验可以投递吗？<span class="arr">▼</span></summary>
+          <div class="answer">可以！校招主打<b>潜力培养</b>，零基础可入职系统培训。</div>
+        </details>
+        <details class="rv d1">
+          <summary><span class="q">Q2</span>管培生发展方向是什么？<span class="arr">▼</span></summary>
+          <div class="answer">作为<b>公司核心储备人才</b>，定向培养营销类 / 职能类核心骨干，晋升优先。</div>
+        </details>
+        <details class="rv d2">
+          <summary><span class="q">Q3</span>是否有包吃住？<span class="arr">▼</span></summary>
+          <div class="answer">配备<b>员工食堂（免费三餐）</b>与<b>员工宿舍</b>，有班车接上班，下班有 10 元/天交通补贴。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 标语 + 二维码 -->
+  <div class="slogan-wrap">
+    <svg class="slogan-wave" viewBox="0 0 1440 92" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,44 C240,10 480,88 720,58 C960,28 1200,86 1440,36 L1440,0 L0,0 Z" fill="#ffffff"/>
+    </svg>
+    <div class="slogan-band">
+      <span class="cloud c1"></span>
+      <span class="cloud c2"></span>
+      <h2>选择粤豪，解锁珠宝行业优质职业起点</h2>
+      <p>粤豪珠宝 2027 校园招聘 ｜ 扫码了解更多岗位详情</p>
+      <div class="qr-row">
+        <div class="qr rv">
+          <div class="box"><img src="assets/qr-hr.png" alt="HR 微信二维码"></div>
+          <p>HR 微信</p>
+          <span>扫码添加 · 咨询岗位</span>
+        </div>
+        <div class="qr rv d1">
+          <div class="box"><img src="assets/qr-official.png" alt="粤豪珠宝企业公众号二维码"></div>
+          <p>企业公众号</p>
+          <span>关注粤豪 · 了解更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>深圳市粤豪珠宝有限公司</b> · 2027届校园招聘<br>
+    地址：深圳市罗湖区水贝IBC环球商务中心B座21-25楼 ｜ 简历投递：huxiubao@yhgroup.com
+  </footer>
+
+</div>
+
+<!-- 灯箱 -->
+<div class="lightbox" id="lightbox"><img src="" alt="预览大图"></div>
+<button class="totop" id="totop" title="返回顶部">↑</button>
+
+<script>
+  // ===== 开场封面：点击开启 =====
+  const cover = document.getElementById('cover');
+  const openBtn = document.getElementById('openBtn');
+
+  function confetti() {
+    const colors = ['#ffd25e','#ff9d3c','#4aa3f0','#2f7de0','#2eb872','#ec6ea5','#a8d8fb'];
+    for (let i = 0; i < 70; i++) {
+      const c = document.createElement('i');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.background = colors[i % colors.length];
+      c.style.width = c.style.height = (6 + Math.random() * 9) + 'px';
+      c.style.animationDelay = (Math.random() * .6) + 's';
+      c.style.animationDuration = (1.8 + Math.random() * 1.8) + 's';
+      if (Math.random() > .5) c.style.borderRadius = '50%';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 4500);
+    }
+  }
+
+  openBtn.addEventListener('click', () => {
+    cover.classList.add('opened');
+    confetti();
+    document.body.classList.remove('locked');
+    document.body.classList.add('started');
+    setTimeout(() => { cover.style.display = 'none'; }, 1100);
+  });
+
+  // ===== 滚动显现 =====
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // ===== 导航高亮 =====
+  const links = [...document.querySelectorAll('.nav-links a')];
+  const secs = ['about','env','works','grow','jobs','apply','qa'].map(id => document.getElementById(id));
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 130;
+    let cur = -1;
+    secs.forEach((s, i) => { if (s && s.offsetTop <= y) cur = i; });
+    links.forEach((a, i) => a.classList.toggle('active', i === cur));
+    document.getElementById('totop').classList.toggle('show', window.scrollY > 600);
+  }, { passive: true });
+
+  // ===== 滑动展示 =====
+  document.querySelectorAll('.slider').forEach(sl => {
+    const track = sl.querySelector('.track');
+    const slides = [...track.children];
+    const dotsBox = sl.querySelector('.sl-dots');
+    const count = sl.querySelector('.sl-count');
+    const n = slides.length;
+    slides.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.setAttribute('aria-label', '第' + (i + 1) + '张');
+      b.addEventListener('click', () => go(i));
+      dotsBox.appendChild(b);
+    });
+    const dots = [...dotsBox.children];
+    const pos = i => slides[i].offsetLeft - slides[0].offsetLeft;
+    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 6;
+    const cur = () => {
+      if (atEnd()) return n - 1;
+      let best = 0;
+      slides.forEach((_, i) => { if (Math.abs(pos(i) - track.scrollLeft) < Math.abs(pos(best) - track.scrollLeft)) best = i; });
+      return best;
+    };
+    const go = i => track.scrollTo({ left: pos((i + n) % n), behavior: 'smooth' });
+    const next = () => atEnd() ? go(0) : go(cur() + 1);
+    const prev = () => track.scrollLeft <= 4 ? go(n - 1) : go(cur() - 1);
+    sl.querySelector('.next').addEventListener('click', next);
+    sl.querySelector('.prev').addEventListener('click', prev);
+    const sync = () => {
+      const c = cur();
+      dots.forEach((d, j) => d.classList.toggle('on', j === c));
+      count.innerHTML = String(c + 1).padStart(2, '0') + ' <i>/ ' + String(n).padStart(2, '0') + '</i>';
+    };
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+
+    // 鼠标拖动
+    let down = false, sx = 0, sl0 = 0, moved = false;
+    track.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse') return;
+      down = true; moved = false; sx = e.clientX; sl0 = track.scrollLeft;
+    });
+    window.addEventListener('pointermove', e => {
+      if (!down) return;
+      const dx = e.clientX - sx;
+      if (Math.abs(dx) > 6 && !moved) { moved = true; track.classList.add('dragging'); }
+      if (moved) track.scrollLeft = sl0 - dx;
+    });
+    window.addEventListener('pointerup', () => {
+      if (!down) return;
+      down = false;
+      if (moved) { track.classList.remove('dragging'); go(cur()); }
+    });
+    track.addEventListener('click', e => {
+      if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; }
+    }, true);
+
+    // 自动播放（鼠标悬停 / 手指触摸时暂停）
+    const ms = +sl.dataset.autoplay || 0;
+    let paused = false;
+    sl.addEventListener('mouseenter', () => paused = true);
+    sl.addEventListener('mouseleave', () => paused = false);
+    track.addEventListener('touchstart', () => {
+      paused = true; clearTimeout(sl._t); sl._t = setTimeout(() => paused = false, 6000);
+    }, { passive: true });
+    if (ms) setInterval(() => {
+      if (!paused && !down && !document.hidden && document.body.classList.contains('started')) next();
+    }, ms);
+  });
+
+  // ===== 灯箱 =====
+  const lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('[data-full]').forEach(f => {
+    f.addEventListener('click', () => { lbImg.src = f.dataset.full; lb.classList.add('show'); });
+  });
+  lb.addEventListener('click', () => lb.classList.remove('show'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('show'); });
+
+  // ===== 返回顶部 =====
+  document.getElementById('totop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>
