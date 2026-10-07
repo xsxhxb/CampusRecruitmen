@@ -1,2 +1,2 @@
 # CampusRecruitmen
-校园招聘主页
+校园招聘主页介绍
